@@ -364,4 +364,39 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
   * **Durum:** Bir ev kiralamak istiyorsunuz ve ev sahibi kiranın en az 3 katı kadar aylık geliriniz olduğunu görmeyi şart koşuyor.
   * **Kanıtlanan Şey:** Gelirinizin alt sınırın üzerinde olduğu.
   * **Saklanan Bilgi:** Tam maaş tutarı, çalıştığınız şirket, banka hesap hareketleri ve harcama alışkanlıkları.
-  * **İşleyiş:** Banka hesap dökümü yerine banka veya dijital cüzdandan ürettiğiniz bir ZK ispatını paylaşırsınız  
+  * **İşleyiş:** Banka hesap dökümü yerine banka veya dijital cüzdandan ürettiğiniz bir ZK ispatını paylaşırsınız.
+
+
+---
+
+## 9. Gerçek Bir Blokzincir Projesi: Uniswap (İP 09)
+
+### Proje ve Kaynaklar
+* **Seçilen Proje:** Uniswap, Ethereum üzerinde çalışan merkeziyetsiz bir token takas protokolüdür (DEX).
+* **Resmî Kaynaklar:** Uygulama arayüzü `app.uniswap.org`, resmî dokümantasyon `docs.uniswap.org`.
+
+### Hangi Problemi, Kimler İçin Çözüyor?
+* **Problem:** Geleneksel finans sistemindeki ve merkezi borsalardaki aracı kurumlara bağımlılığı, sansür riskini ve üçüncü tarafa güvenme zorunluluğunu azaltır. Kullanıcı, varlıklarını borsaya teslim etmeden doğrudan kendi cüzdanından takas yapar.
+* **Hedef Kitle:** Kripto varlıklarını hızlıca ve aracı olmadan takas etmek isteyen bireysel kullanıcılar; ayrıca havuzlara likidite ekleyerek ücret geliri elde etmek isteyenler.
+
+### Zincir İçi (On-Chain) ve Zincir Dışı (Off-Chain) Ayrımı
+| Kısım | Zincir İçi (On-Chain) | Zincir Dışı (Off-Chain) |
+| :--- | :--- | :--- |
+| **Neler?** | Token takası (örn. ETH verip başka bir token almak), likidite havuzuna para ekleme/çekme, akıllı sözleşmelerin çalışması | Web sitesinin tasarımı ve butonları, fiyat grafikleri, arayüz sunucuları, tarayıcıdaki cüzdan eklentisi (MetaMask vb.) |
+| **Nerede kayıtlı?** | Blokzincirde, kalıcı ve herkes tarafından denetlenebilir | Şirketin ve kullanıcının kendi sunucu/cihazlarında |
+
+### Neden Blokzincir? (Normal Veritabanıyla Farkı)
+* Sistem merkezi bir sunucuda normal bir veritabanıyla çalışsaydı, işletmeci istediği zaman havuzları dondurabilir, kullanıcıların varlıklarına el koyabilir veya emirleri manipüle edebilirdi.
+* Blokzincirde kurallar akıllı sözleşme koduna yazılıdır ve değiştirilemez; işlemler şeffaf biçimde herkes tarafından doğrulanabilir.
+* Kullanıcı varlığını kendi cüzdanında tutar, her takas doğrudan sözleşmeyle yapılır.
+
+### Kullanıcı Kime ve Neye Güveniyor?
+* **Akıllı sözleşmelere:** Kullanıcı bir şirkete değil, arka planda çalışan ve kimsenin tek taraflı değiştiremediği sözleşme koduna güvenir.
+* **Arayüze (işletmeciye):** Kullanıcı, `app.uniswap.org` adresinin doğru olduğuna ve arayüzün kendisini yanlış sözleşmeye yönlendirmediğine güvenir.
+* **Veri sağlayıcılara:** Arayüzdeki fiyat, grafik ve işlem geçmişi gibi veriler RPC sağlayıcıları ve indexer servislerinden gelir. Bu veriler yanlış veya gecikmeli gösterilebilir; bu yüzden kesin sonuç için Explorer'daki işlem kaydına bakmak gerekir.
+* **Cüzdana:** Tarayıcıdaki cüzdan eklentisinin güvenli çalıştığına ve private key'in korunduğuna güvenilir.
+
+### Benim Yorumum
+* **Güçlü Yön:** Aracıyı aradan çıkarır; izinsiz (permissionless) olarak herkes, 7/24 takas yapabilir ve varlıklar işlem sırasında kullanıcının kontrolünde kalır.
+* **Sınırlama:** Ağ yoğunluğunda işlem ücretleri (gas fee) artabilir. Ayrıca akıllı sözleşmelerde bir yazılım açığı (bug) çıkarsa fonlar risk altına girebilir ve blokzincirdeki işlem geri alınamaz.  
+
