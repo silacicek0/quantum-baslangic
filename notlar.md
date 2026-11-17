@@ -1,5 +1,3 @@
-
-```markdown
 # 📚 Blokzincir Araştırma Notları (QTeam)
 
 ## 1. Blokzincir ve Ortak Kayıt (İP 01)
@@ -12,8 +10,8 @@
 * **Dağıtık Defter (Distributed Ledger):** Bu veri zincirinin tek bir merkezde *(örneğin bir bankanın bilgisayarında)* değil, ağa bağlı binlerce farklı bilgisayarda *(düğüm / node)* aynı anda eş zamanlı olarak saklanması mimarisidir.
 
 **İşlem Akışı ve Yapı İlişkisi:**
-`Transactions (İşlemler)` $\rightarrow$ Bir araya gelip paketlenir $\rightarrow$ `[Blok]` $\rightarrow$ Kronolojik olarak dizilir $\rightarrow$ `[Blockchain]` $\rightarrow$ Herkese dağıtılır $\rightarrow$ `[Distributed Ledger]`
-* İşlem, ağdaki hareketliliktir. Bunlar birikir $\rightarrow$ blok oluşur. Bloklar şifreleme yöntemiyle arka arkaya dizilerek **Blockchain**'i meydana getirir *(verinin nasıl organize edildiğini / zincir yapıyı tanımlar)*.
+`Transactions (İşlemler)` → Bir araya gelip paketlenir → `[Blok]` → Kronolojik olarak dizilir → `[Blockchain]` → Herkese dağıtılır → `[Distributed Ledger]`
+* İşlem, ağdaki hareketliliktir. Bunlar birikir → blok oluşur. Bloklar şifreleme yöntemiyle arka arkaya dizilerek **Blockchain**'i meydana getirir *(verinin nasıl organize edildiğini / zincir yapıyı tanımlar)*.
 * Oluşan blockchainler, ağdaki tüm bilgisayarlara kopyalanarak **Distributed Ledger** üzerinde güncellenir *(verinin nasıl saklandığını ve paylaşıldığını ifade eder)*.
 
 ### Merkezi Veritabanı vs. Blockchain
@@ -37,7 +35,7 @@
 ### Geçmiş İşlem Kaydı vs. Güncel Durum (State)
 * **Geçmiş İşlem Kaydı (Transaction / Log):** Geçmişte yapılan her işlem, blokzincir defterine kalıcı olarak yazılır. Bir akıllı sözleşmeye gönderilen her talep *(örneğin: Ahmet, sözleşmedeki X değerini 5 yap)* bir transaction olarak bir bloğun içine gömülür ve kriptografik olarak kilitlenir. Bu işlem kaydı asla değiştirilemez ve silinemez. Bir şirketin muhasebe defterindeki satırlar gibidir; karalanıp silinemez, sadece altına yeni satır eklenir.
 * **Sözleşmede Tutulan Güncel Değer (State / Durum Verisi):** Sözleşmenin o anki hafızasında sakladığı ve uygulamaların sorguladığı en son değerdir. Akıllı sözleşmenin içinde tanımlanmış değişkenlerdir. Bu veriler blokzincirin **World State** adı verilen güncel veri tabanında saklanır. Sözleşmenin kuralları dahilinde bu değer güncellenebilir *(örneğin: Ahmet'in banka hesabındaki 10 olan toplam bakiye bilgisi)*.
-* **İlişki:** Geçmiş işlem kaydı $\rightarrow$ blokların içinde depolanır; Güncel durum verisi $\rightarrow$ durum ağacında depolanır. Bir tetikleyici sayesinde *(Transaction)* $\rightarrow$ Güncel durum verisi güncellenir.
+* **İlişki:** Geçmiş işlem kaydı → blokların içinde depolanır; Güncel durum verisi → durum ağacında depolanır. Bir tetikleyici sayesinde *(Transaction)* → Güncel durum verisi güncellenir.
 
 ### Etkinlik Kayıt Sisteminde Blockchain Kullanımı
 * **Avantajlar:**
@@ -105,7 +103,7 @@
    * **PoS:** Belirli sayıda validator bloğu onayladıktan sonra blok finalized olur ve matematiksel olarak ağ yok olmadıkça değiştirilemez.
 
 * **Yorum - Tek Bir Node Kapanınca Bütün Ağın Durup Durmayacağı Neye Bağlıdır?**
-  1. **Ağın Türü (Merkeziyet Derecesi):** Centralized *(merkezi)* ise *(tek 1 ana sunucu)* $\rightarrow$ o node kapanınca tüm ağ çöker. Decentralized ise hiçbir şey olmaz.
+  1. **Ağın Türü (Merkeziyet Derecesi):** Centralized *(merkezi)* ise *(tek 1 ana sunucu)* → o node kapanınca tüm ağ çöker. Decentralized ise hiçbir şey olmaz.
   2. **Konsensüs Mekanizmasının Hata Toleransı:**
      * **PoW:** Ağdaki madencilerin %90'ı kapansa bile ağ durmaz, sadece yeni blok üretme hızı yavaşlar.
      * **PoS / BFT:** Doğrulayıcıların en az %66.6'sının aktif *(Bizans Hata Toleransı)* ve çevrimiçi olması gerekir.
@@ -208,7 +206,7 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
    * **ETH:** Ethereum ağının kendi yerel parasıdır.
 2. **Token (Belirteç):** Bir blokzincir ağının üzerine sonradan akıllı sözleşmeler aracılığıyla inşa edilen, o ağın kendi malı olmayan dijital varlıklardır. İşlem ücretlerini doğrudan kendi cinsinden ödeyemezler.
    * **USDC:** Ethereum ağı üzerinde akıllı sözleşmeyle üretilmiş bir tokendir. İşlem ücreti ödenirken ağın kendi parası ETH ile ödeme yapılır.
-   * *Özet:* Herhangi bir blokzincirin doğrudan **ETH** ile ödül ve ETH aktarımında kullanılması $\rightarrow$ Native varlıktır.
+   * *Özet:* Herhangi bir blokzincirin doğrudan **ETH** ile ödül ve ETH aktarımında kullanılması → Native varlıktır.
 
 | Kavram | Özelliği | Benzersizliği | Standardı |
 | :--- | :--- | :--- | :--- |
@@ -221,8 +219,8 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
 * **Testnet (Test Ağı):** Tek amacı geliştiricilerin uygulamalarını ve kodlarını asıl ağa almadan denemeleri için kurulan, paranın bir değeri olmayan simülasyon ortamıdır.
 * **Neden Ayrılır?**
   1. Maliyet
-  2. Güvenlik $\rightarrow$ gerçek paralar vardır
-  3. Hata toleransı $\rightarrow$ testnette yazılıma yeni sürüm verilir, mainnet'te geçiş yapılmaz.
+  2. Güvenlik → gerçek paralar vardır
+  3. Hata toleransı → testnette yazılıma yeni sürüm verilir, mainnet'te geçiş yapılmaz.
 * **Test ETH ve Test USDC:** Hiçbir ekonomik değere sahip değildir. Yalnızca yazılımın doğru çalışıp çalışmadığını denemek için kullanılan dijital simülasyon araçlarıdır.
 
 * **Yorum - Etkinliğe Giriş Hakkını Temsil Etmek İçin Mutlaka Token Gerekir mi?**
@@ -238,7 +236,7 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
 * **State (Durum):** Blokzincir bilgisayarının o anki canlı hafızasının anlık fotoğrafıdır. Hangi cüzdanda ne kadar para olduğu, akıllı sözleşmelerin güncel verileri gibi tüm sistem bilgileri "state" içinde tutulur ve her yeni işlemle birlikte güncellenir.
 
 **Kodun Derlenme ve Çalışma Akışı:**
-`Source Code` $\rightarrow$ `Compilation` $\rightarrow$ `Bytecode`
+`Source Code` → `Compilation` → `Bytecode`
 * **Source Code:** Yazılımcının Solidity gibi diller kullanarak yazdığı, insan tarafından okunabilen ham kod satırlarıdır.
 * **Compilation:** İnsan diline yakın olan kaynak kodun, blokzincir bilgisayarının *(EVM)* anlayabileceği dile dönüştürme sürecidir. Bu işleme **compile** yapmak denir.
 * **Bytecode:** Derleme sonucunda ortaya çıkan, EVM'nin okuyabildiği tamamen 16'lık sayı ve harflerden oluşan karmaşık kod yığınıdır.
@@ -248,7 +246,7 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
 * İnsan tarafından yazılan yazılımlar *(web siteleri, mobil uygulamalar)* ile blokzincirdeki okunması imkânsız makine kodu *(Bytecode)* arasında bir tercüman görevi görür.
 * **Ne Zaman Elde Edilir?** ABI, kaynak kodun *(Solidity)* derlenme *(compilation)* işlemi yapıldığı anda elde edilir. Yazılımcı kodunu derlediğinde, compiler tıpkı çifte çekirdekli bir fabrika gibi çalışır: Bir yandan **Bytecode** *(sözleşme blokzincire yüklenecek - deploy)*, diğer yandan **ABI** *(JSON formatında bir fonksiyon listesi)* üretir. Sözleşmeyi yayınlamadan ABI zaten elimizdedir.
 * **Bir Sözleşmenin Adresi Dışında Hangi Arayüz Bilgilerine İhtiyaç Duyulabilir?**
-  1. Sözleşmenin ABI bilgisi *(JSON şablonu)* $\rightarrow$ sözleşmenin hangi fonksiyonlara sahip olduğunu, hangi parametreleri kabul ettiğini belirtir.
+  1. Sözleşmenin ABI bilgisi *(JSON şablonu)* → sözleşmenin hangi fonksiyonlara sahip olduğunu, hangi parametreleri kabul ettiğini belirtir.
   2. Fonksiyon imzaları *(Function Signatures / Selectors)*
   3. Kullanılan Token / Kontrat Standartları *(ERC-20, ERC-721, ERC-1155 gibi)*
 
@@ -300,9 +298,9 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
 ## 7. Bir İşlemin Yolculuğu (İP 07)
 
 ### Cüzdan İşlemi Farkları
-1. **Connect Wallet (Cüzdan Bağlamak):** Merkeziyetsiz bir uygulamaya *(dApp)* genel cüzdan adresini göstermektir $\rightarrow$ **Ücretsiz, risksiz**.
-2. **Sign Message (Mesaj İmzalamak):** Private key'imizi kullanarak bir metni kriptografik olarak onaylamaktır $\rightarrow$ **Ücretsiz, dikkatli olunmalı**.
-3. **Send Transaction (İşlem Göndermek):** Blokzincir ağının state'ini kalıcı olarak değiştiren bir talimat yayınlamaktır $\rightarrow$ **Ağ ücreti gerektirir, en riskli adımdır**.
+1. **Connect Wallet (Cüzdan Bağlamak):** Merkeziyetsiz bir uygulamaya *(dApp)* genel cüzdan adresini göstermektir → **Ücretsiz, risksiz**.
+2. **Sign Message (Mesaj İmzalamak):** Private key'imizi kullanarak bir metni kriptografik olarak onaylamaktır → **Ücretsiz, dikkatli olunmalı**.
+3. **Send Transaction (İşlem Göndermek):** Blokzincir ağının state'ini kalıcı olarak değiştiren bir talimat yayınlamaktır → **Ağ ücreti gerektirir, en riskli adımdır**.
 
 ### İşlem ve Ağ Terimleri
 * **Gas Limit:** Bir işlemin gerçekleşmesi için harcamaya razı olduğunuz maksimum hesaplama birimi miktarıdır.
@@ -337,8 +335,8 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
    * **STATUS: FAILED / REVERTED:** İşlem hata verdi, varlıklar iade edildi, harcanan gas kesildi.
 
 * **Yorum - "İşlem Başarısız" ile "Sonucunu Öğrenemedim" Neden Farklıdır?**
-  * **"İşlem başarısız"** $\rightarrow$ Kesinleşmiş başarısız sonuçtur.
-  * **"Sonucunu öğrenemedim"** $\rightarrow$ Kesin değil veya node'dan yanıt alınamıyor *(belirsizlik durumu)*.
+  * **"İşlem başarısız"** → Kesinleşmiş başarısız sonuçtur.
+  * **"Sonucunu öğrenemedim"** → Kesin değil veya node'dan yanıt alınamıyor *(belirsizlik durumu)*.
 
 ---
 
@@ -366,10 +364,4 @@ Blokzincir dünyasındaki varlıklar üretilme ve ait oldukları ağ ile olan il
   * **Durum:** Bir ev kiralamak istiyorsunuz ve ev sahibi kiranın en az 3 katı kadar aylık geliriniz olduğunu görmeyi şart koşuyor.
   * **Kanıtlanan Şey:** Gelirinizin alt sınırın üzerinde olduğu.
   * **Saklanan Bilgi:** Tam maaş tutarı, çalıştığınız şirket, banka hesap hareketleri ve harcama alışkanlıkları.
-  * **İşleyiş:** Banka hesap dökümü yerine banka veya dijital cüzdandan ürettiğiniz bir ZK ispatını paylaşırsınız $\rightarrow$ **Pasif gelir elde edebilirim.**
-
-* **DePIN (Decentralized Physical Infrastructure Networks - Merkeziyetsiz Fiziksel Altyapı Ağları):**
-  * Blokzincir ağını hızlandıran veya yeni nesil teknolojiyi alarak ve kişisel verileri gizli tutarak işlem yapabilmek için; mevcut donanım kaynaklarını *(internet, depolama vb.)* veya özel sensör cihazlarınızı ağa bağlayarak gerçek dünya hizmeti sunmanız karşılığında token ödülü kazanma şeklidir.
-
-
-```
+  * **İşleyiş:** Banka hesap dökümü yerine banka veya dijital cüzdandan ürettiğiniz bir ZK ispatını paylaşırsınız  
