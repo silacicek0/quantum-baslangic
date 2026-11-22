@@ -1,7 +1,5 @@
 # Quantum Başlangıç - Blokzincir Takımı Oryantasyon Çalışması
-
-Bu depo, **Blokzincir Takımı** Yeni Üye Oryantasyon İş Paketi kapsamında hazırlanmıştır. Çalışmanın temel amacı; blokzincir mimarisinin temellerini kavramak, kriptografik cüzdan mantığını uygulamak, Ethereum Sepolia test ağında akıllı sözleşmeler geliştirmek ve bu sözleşmeleri kendi web arayüzüme bağlayarak uçtan uca çalışan bir merkeziyetsiz uygulama (dApp) ortaya çıkarmaktır.
-
+ 
 ## 🎯 Öğrenmek ve Uygulamak İstediğim Konular
 
 * **Blokzincir Temelleri & Ağ Yapısı:** Dağıtık defter teknolojisi, konsensüs mekanizmaları (PoW/PoS), RPC erişimi, Explorer kullanımı ve işlemlerin yaşam döngüsü.
