@@ -9,12 +9,8 @@
 * **Web3 Arayüz Entegrasyonu:** MetaMask cüzdan bağlantısı, ağ kontrolleri, işlem durumlarının (pending, onay, hata) kullanıcıya aktarılması ve akıllı sözleşmeyle etkileşim kuran web uygulaması geliştirme.
 
 ---
-
+ 
 ## Araştırma Notlarım
 
-<<<<<<< HEAD
-Detaylı araştırma notlarım için [notlar.md](./notlar.md) dosyasına göz atabilirsiniz.
-=======
 * Temel notlar için [notlar.md](notlar.md) dosyasına göz atabilirsiniz.
-* Kriptografik cüzdan türetme, Sepolia işlemleri, `EtkinlikKayit` testleri ve dApp arayüz/hata yönetimi notları için [notlar2.md](notlar2.md) dosyasına göz atabilirsiniz.
->>>>>>> 13db4a4 (Add IP 12-25 notes in notlar2.md and link it in README)
+* Kriptografik cüzdan türetme, Sepolia işlemleri, `EtkinlikKayit3` testleri ve dApp arayüz/hata yönetimi notları için [notlar2.md](notlar2.md) dosyasına göz atabilirsiniz.
