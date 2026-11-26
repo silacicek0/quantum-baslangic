@@ -12,4 +12,9 @@
 
 ## Araştırma Notlarım
 
+<<<<<<< HEAD
 Detaylı araştırma notlarım için [notlar.md](./notlar.md) dosyasına göz atabilirsiniz.
+=======
+* Temel notlar için [notlar.md](notlar.md) dosyasına göz atabilirsiniz.
+* Kriptografik cüzdan türetme, Sepolia işlemleri, `EtkinlikKayit` testleri ve dApp arayüz/hata yönetimi notları için [notlar2.md](notlar2.md) dosyasına göz atabilirsiniz.
+>>>>>>> 13db4a4 (Add IP 12-25 notes in notlar2.md and link it in README)
